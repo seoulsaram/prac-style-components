@@ -14,6 +14,5 @@ const Btn = styled.button`
   color: white;
   border-radius: 45px;
   padding: 10px;
-  background-color: ${(props) =>
-    props.color === 'red' ? 'red' : 'blueviolet'};
+  background-color: ${(props) => (props.color === 'red' ? 'red' : 'blue')};
 `;
