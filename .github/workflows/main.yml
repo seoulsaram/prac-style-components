@@ -14,16 +14,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Use Node ${{ matrix.node }}
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
-
-      #- name: Install deps and build (with cache)
-      # uses: bahmutov/npm-install@v1
+          node-version: 14.x
 
       - name: Install dependencies
-        run: yarn
+        uses: bahmutov/npm-install@v1
 
       - name: Lint
         run: yarn lint
