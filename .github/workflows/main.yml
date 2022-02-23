@@ -2,11 +2,12 @@ name: CI
 on: [push]
 jobs:
   build:
-    name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
 
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
@@ -15,12 +16,6 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
-
-      - name: Lint
-        run: yarn lint
-
-      - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
 
       - name: Build
         run: yarn build
