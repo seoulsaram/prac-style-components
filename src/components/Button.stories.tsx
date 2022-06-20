@@ -4,20 +4,22 @@ import { Button, ButtonProps } from './Button';
 const meta: Meta = {
   title: 'Button',
   component: Button,
-  argTypes: {
-    text: {
-      control: {
-        type: 'text',
-      },
-    },
-  },
+  // argTypes: {
+  //   text: {
+  //     control: {
+  //       type: 'text',
+  //     },
+  //   },
+  // },
   parameters: {
     controls: { expanded: true },
   },
 };
 export default meta;
+
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-  text: 'My Button',
+  children: 'My Button',
+  size: 'medium',
 };

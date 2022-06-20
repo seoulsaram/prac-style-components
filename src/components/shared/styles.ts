@@ -1,20 +1,11 @@
 export const color = {
   // Palette
-  primary: '#FF4785', // Coral
-  secondary: '#1EA7FD', // Ocean
-  tertiary: '#DDDDDD', // Light grey
-
-  orange: '#FC521F',
-  gold: '#FFAE00',
-  green: '#66BF3C',
-  seafoam: '#37D5D3',
-  purple: '#6F2CAC',
-  ultraviolet: '#2A0481',
-  red: '#ff4400',
-
-  // Calm
-  blueLighter: '#E3F3FF', // rgba($color.blue, 12%)
-  blueLight: '#F3FAFF', // rgba($color.blue, 6%)
+  primary: '#1a61f7', // blue
+  primaryLight: 'rgba(26, 97, 247, 0.2)',
+  secondary: '#111111', // black
+  tertiary: '#DDDDDD', // grey
+  tertiaryLight: '#666666', // grey
+  white: '#fff',
 
   // Monochrome
   lightest: '#FFFFFF',
@@ -34,6 +25,12 @@ export const color = {
   negative: '#D43900', // Crimson
   warning: '#A15C20', // Burnt sienna
   selected: '#0271B6', // Navy
+};
+
+export const radious = {
+  default: 24,
+  small: 18,
+  sqr: 4,
 };
 
 export const typography = {
@@ -60,5 +57,9 @@ export const typography = {
     l2: 40,
     l3: 48,
     code: 90,
+  },
+  spacing: {
+    default: 1.25,
+    small: 0.75,
   },
 } as const;
