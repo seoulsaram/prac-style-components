@@ -1,9 +1,4 @@
-// // https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
-// export const parameters = {
-//   // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
-//   actions: { argTypesRegex: '^on.*' },
-// };
-
+//이 파일은 스토리 렌더링 을 구성하는 곳 입니다. 모든 스토리에 적용되는 글로벌 코드에 사용할 수 있습니다.
 import React from 'react';
 import { loadFontsForStorybook } from '../src/utils/index';
 

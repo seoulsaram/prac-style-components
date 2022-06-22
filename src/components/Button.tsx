@@ -5,7 +5,7 @@ import React, {
   PropsWithChildren,
   ReactNode,
 } from 'react';
-import { styled } from '@storybook/theming';
+import styled from 'styled-components';
 import { color, radious, typography } from './shared/styles';
 import { darken, transparentize } from 'polished';
 
